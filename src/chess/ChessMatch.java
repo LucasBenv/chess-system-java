@@ -46,8 +46,8 @@ public class ChessMatch {
 		if(!board.thereIsAPiece(position)) {
 			throw new ChessException("não existe nenhuma peça na posição digitada");
 		}
-		if(!board.piece(position).isThereAnyPossibleMove()) {
-			throw new ChessException("nao existe nenhum movemento possivel");
+		if (!board.piece(position).isThereAnyPossibleMove()) {
+			throw new ChessException("There is no possible moves for the chosen piece");
 		}
 	}
 	
@@ -74,6 +74,7 @@ public class ChessMatch {
 		placeNewPiece('e', 2, new Rook(board, Color.WHITE));
 		placeNewPiece('e', 1, new King(board, Color.WHITE));
 		placeNewPiece('d', 1, new King(board, Color.WHITE));
+		placeNewPiece('c', 4, new King(board, Color.WHITE));
 		
 		placeNewPiece('c', 7, new Rook(board, Color.BLACK));
 		placeNewPiece('c', 8, new Rook(board, Color.BLACK));
